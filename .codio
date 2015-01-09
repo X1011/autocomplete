@@ -4,7 +4,9 @@
 },
 
 "preview": {
-	"ungit": "https://{{domain}}:9501/#/repository?path=/home/codio/workspace"
+	"app": "http://{{domain}}:1024",
+	"ungit": "https://{{domain}}:9501/#/repository?path=/home/codio/workspace",
+	"app: static": "https://{{domain}}/app/index.html"
 }
 
 }
