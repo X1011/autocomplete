@@ -1,4 +1,3 @@
-import chai from 'chai';
 var should = chai.should();
 
 describe('test', function() {
