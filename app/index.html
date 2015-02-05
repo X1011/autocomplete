@@ -7,6 +7,11 @@
 	<link rel='stylesheet' href='mocha_tweak.css'>
 	<script src='//cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.min.js'></script>
 	<script src='//cdnjs.cloudflare.com/ajax/libs/chai/1.10.0/chai.min.js'></script>
+	
+	<style>
+		body {margin: 1em}
+	</style>
+	<link rel='stylesheet' href='autocomplete.css'>
 </head>
 
 <body>
@@ -14,6 +19,9 @@
 	<script>mocha.setup('bdd')</script>
 	<script src='test.js'></script>
 	<script>mocha.run()</script>
+	
+	<input type='text' class='autocomplete' autocomplete='off'>
+	
 </body>
 
 </html>
