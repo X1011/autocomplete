@@ -12,6 +12,7 @@
 
 			input.addEventListener('focus', createDropdown);
 			input.addEventListener('blur', removeDropdown);
+			input.addEventListener('input', updateFilter);
 		}
 	});
 
@@ -35,6 +36,12 @@
 	function removeDropdown(e) {
 		var input = e.target;
 		input.parentNode.removeChild(dropdowns[input]);
+	}
+	
+	function updateFilter(e) {
+		//todo: hack
+		removeDropdown(e);
+		createDropdown(e);
 	}
 
 })();
