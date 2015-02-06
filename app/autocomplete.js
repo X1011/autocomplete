@@ -11,14 +11,17 @@ window.addEventListener('load', function() {
 		input.setAttribute('autocomplete', 'off'); //prevent browser's native autocomplete from interfering
 		
 		input.addEventListener('focus', createDropdown);
+		input.addEventListener('blur', removeDropdown);
 	}
 });
 	
 var candidates = ['apple', 'orange', 'banana'];
+var dropdowns = [];
 	
 function createDropdown(e) {
 	var input = e.target;
 	var dropdown = document.createElement('div');
+	dropdowns[input] = dropdown;
 	
 	candidates.forEach(function(candidate) {
 		var element = document.createElement('div');
@@ -27,6 +30,11 @@ function createDropdown(e) {
 	});
 	
 	input.parentNode.insertBefore(dropdown, input.nextSibling);
+}
+	
+function removeDropdown(e) {
+	var input = e.target;
+	input.parentNode.removeChild(dropdowns[input]);
 }
 
 })();
