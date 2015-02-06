@@ -27,10 +27,16 @@
 		filter(candidates, input.value).forEach(function(candidate) {
 			var element = document.createElement('div');
 			element.textContent = candidate;
+			element.addEventListener('click', function(e) {choose(input, candidate)});
 			dropdown.appendChild(element);
 		});
 
 		input.parentNode.insertBefore(dropdown, input.nextSibling);
+	}
+	
+	function choose(input, candidate) {
+		console.log('choosing');
+		input.value = candidate;
 	}
 
 	function removeDropdown(e) {
